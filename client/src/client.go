@@ -40,7 +40,7 @@ func main() {
 	fakeDeviceToken := "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 	for i := 0; i < 10; i++ {
-		conn.SendNotification(fakeDeviceToken, fmt.Sprintf("%v", i), "", i, nil)
+		conn.SendBasicNotification(fakeDeviceToken, fmt.Sprintf("%v", i), "", i)
 	}
 
 	time.Sleep(time.Duration(5) * time.Second)
